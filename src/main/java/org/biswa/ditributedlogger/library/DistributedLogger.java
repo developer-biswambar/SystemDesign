@@ -1,6 +1,6 @@
-package ditributedlogger.library;
+package org.biswa.ditributedlogger.library;
 
-import ditributedlogger.client.LogClient;
+import org.biswa.ditributedlogger.client.LogClient;
 
 public class DistributedLogger implements Logger {
 
@@ -28,7 +28,6 @@ public class DistributedLogger implements Logger {
     }
 
     private void flushLogs() {
-
         logClient.sendLogsToServer(logBuffer.getBufferedLogs());
         logBuffer.clear();
     }

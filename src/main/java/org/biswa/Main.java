@@ -1,17 +1,29 @@
 package org.biswa;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import org.biswa.snakeladder.BoardEnitty;
+import org.biswa.snakeladder.Game;
+import org.biswa.snakeladder.Player;
+import org.biswa.snakeladder.Snake;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Player biswa = new Player("1", "Biswa");
+        Player shivangi = new Player("1", "shivangi");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        var snake1 = new Snake(90, 10);
+        var snake2 = new Snake(55, 20);
+        var ladder = new Snake(15, 80);
+        var ladder2 = new Snake(30, 65);
+
+        Game game = new Game(1000000, 6, new ArrayList<>(List.of(biswa, shivangi)),
+                new ArrayList<>(List.of(snake1, snake2, ladder2, ladder)));
+
+
+        game.startGame();
+
     }
 }

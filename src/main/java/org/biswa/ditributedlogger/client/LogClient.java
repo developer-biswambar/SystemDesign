@@ -1,6 +1,6 @@
-package ditributedlogger.client;
+package org.biswa.ditributedlogger.client;
 
-import ditributedlogger.library.LogMessage;
+import org.biswa.ditributedlogger.library.LogMessage;
 
 import java.util.List;
 

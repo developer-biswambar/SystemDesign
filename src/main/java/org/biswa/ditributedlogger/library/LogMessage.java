@@ -1,4 +1,4 @@
-package ditributedlogger.library;
+package org.biswa.ditributedlogger.library;
 
 import lombok.Getter;
 
