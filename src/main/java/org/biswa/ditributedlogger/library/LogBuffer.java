@@ -5,8 +5,7 @@ import java.util.List;
 
 public class LogBuffer {
     private static final int MAX_BUFFER_SIZE = 10;
-
-    private List<LogMessage> buffer;
+    private final List<LogMessage> buffer;
 
     public LogBuffer() {
         this.buffer = new ArrayList<>();
